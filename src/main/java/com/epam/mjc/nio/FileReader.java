@@ -9,7 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class FileReader {
-    static private final Logger LOGGER = Logger.getLogger(FileReader.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(FileReader.class.getName());
 
     public Profile getDataFromFile(File file) {
         Path path = file.toPath();
@@ -44,7 +44,7 @@ public class FileReader {
         return profile;
     }
 
-    static private String getFieldName(String[] line) {
+    private static String getFieldName(String[] line) {
         return line[0].substring(0, line[0].length() - 1);
     }
 }
